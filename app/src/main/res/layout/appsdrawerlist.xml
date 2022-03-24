@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	columnCount="1"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	rowCount="1"
+	android:orientation="vertical">
+
+	<ImageView
+		android:layout_height="35dp"
+		android:layout_width="35dp"
+		android:src="@android:drawable/ic_delete"
+		android:id="@+id/appsdrawerlistappicon"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Text"
+		android:id="@+id/appsdrawerlistappnameTextView"
+		android:textSize="9sp"/>
+
+</GridLayout>
+
