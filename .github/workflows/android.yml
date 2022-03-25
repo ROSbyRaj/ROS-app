@@ -1,17 +1,41 @@
-name: Android CI
+name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
   pull_request:
-    branches: [ main ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Grant execute permission for gradlew And Run Gradlew
-      run: |
-chmod +x gradlew
- ./gradlew build
+      - name: Clone repository
+        uses: actions/checkout@v2
+
+      - name: Build APKs
+        shell: bash {0}
+        run: |
+          exit_on_error() { echo "$1"; exit 1; }
+
+          echo "Setting vars"
+
+          APK_DIR_PATH="./app/build/outputs/apk/debug"
+          chmod +x gradlew
+          ./gradlew
+          # Used by attachment steps later
+          echo "APK_DIR_PATH=$APK_DIR_PATH" >> $GITHUB_ENV
+          
+          done
+
+      - name: Attach universal APK file
+        uses: actions/upload-artifact@v2
+        with:
+          name: ros-debug
+          path: |
+            ${{ env.APK_DIR_PATH }}/*.apk
+            ${{ env.APK_DIR_PATH }}/output-metadata.json
+
+     
