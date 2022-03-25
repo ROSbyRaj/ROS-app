@@ -59,7 +59,7 @@ public class MainActivityTerminal extends Activity
 		Display d = getWindowManager().getDefaultDisplay(); Point size = new Point(); d.getSize(size);
 		LinearLayout ll =findViewById(R.id.mainLinearLayouttermoutput);
 		LayoutParams params = (LayoutParams) ll.getLayoutParams();
-		params.height = size.x / 2;
+		params.height = size.x / 2 -10;
 		ll.setLayoutParams(params);
 	}
 	private class terminal extends AsyncTask
