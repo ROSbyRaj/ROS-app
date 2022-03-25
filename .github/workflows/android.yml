@@ -8,9 +8,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: set up JDK 11
@@ -20,14 +18,13 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Grant execute permission for gradlew And Run Gradlew
+      run: |
+chmod +x gradlew
+ ./gradlew build
 
       - name: 'Upload Artifact'
     uses: actions/upload-artifact@v3
     with:
-      name: ROS-debug.apk
+      name: ros-debug.apk
       path: build/outputs/apk/*.apk
-      retention-days: 5
