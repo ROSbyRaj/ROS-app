@@ -33,9 +33,6 @@ jobs:
       - name: Attach universal APK file
         uses: actions/upload-artifact@v2
         with:
-          name: ros-debug
-          path: |
-            ${{ env.APK_DIR_PATH }}/*.apk
-            ${{ env.APK_DIR_PATH }}/output-metadata.json
-
-     
+          name: ros-debug.apk
+          path:   ${{ env.APK_DIR_PATH }}/*.apk
+          
