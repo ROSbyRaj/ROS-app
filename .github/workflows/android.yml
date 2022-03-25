@@ -22,9 +22,3 @@ jobs:
       run: |
 chmod +x gradlew
  ./gradlew build
-Uploadapk:
-      - name: 'Upload Artifact'
-    uses: actions/upload-artifact@v3
-    with:
-      name: ros-debug.apk
-      path: build/outputs/apk/*.apk
