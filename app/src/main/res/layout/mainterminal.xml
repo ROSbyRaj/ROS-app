@@ -34,7 +34,7 @@
 		android:orientation="horizontal">
 
 		<EditText
-			android:layout_height="wrap_content"
+			android:layout_height="30dp"
 			android:layout_width="match_parent"
 			android:ems="10"
 			android:id="@+id/mainEditTextcommand"
