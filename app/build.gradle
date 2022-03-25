@@ -17,12 +17,10 @@ android {
 
 signingConfigs {
         debug {
-            // You need to specify either an absolute path or include the
-            // keystore file in the same directory as the build.gradle file.
-            storeFile file("debug.keystore")
-            storePassword "rajdave018"
-            keyAlias "rosdebugkey"
-            keyPassword "rajdave018"
+          storeFile file('dev_keystore.jks')
+            keyAlias 'alias'
+            storePassword 'xrj45yWGLbsO7W0v'
+            keyPassword 'xrj45yWGLbsO7W0v'
         }
     }
     buildTypes {
