@@ -15,8 +15,8 @@
 	</LinearLayout>
 
 	<LinearLayout
-		android:layout_height="match_parent"
-		android:layout_width="match_parent"
+		android:layout_height="fill_parent"
+		android:layout_width="fill_parent"
 		android:orientation="vertical"
 		android:id="@+id/desktoplinearlayout"
 		android:background="#000000"/>
