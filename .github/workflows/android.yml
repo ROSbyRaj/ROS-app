@@ -28,7 +28,7 @@ jobs:
           # Used by attachment steps later
           echo "APK_DIR_PATH=$APK_DIR_PATH" >> $GITHUB_ENV
           
-          done
+
 
       - name: Attach universal APK file
         uses: actions/upload-artifact@v2
