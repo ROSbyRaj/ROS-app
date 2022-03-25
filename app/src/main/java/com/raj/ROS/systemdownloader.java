@@ -123,7 +123,7 @@ public class systemdownloader extends AsyncTask
 		super.onProgressUpdate(values);
 		MainActivity.filedownloaddialog.setIndeterminate(false);
 		MainActivity.filedownloaddialog.setMax(100);
-		MainActivity.filedownloaddialog.setProgress(values[0]);
+		MainActivity.filedownloaddialog.setProgress((Interger)values[0]);
 	}
 
 	@Override
