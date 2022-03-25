@@ -24,7 +24,7 @@ jobs:
 
           APK_DIR_PATH="./app/build/outputs/apk/debug"
           chmod +x gradlew
-          ./gradlew
+          ./gradlew assembleDebug
           # Used by attachment steps later
           echo "APK_DIR_PATH=$APK_DIR_PATH" >> $GITHUB_ENV
           
